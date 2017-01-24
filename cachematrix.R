@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Finding inverse of a square matrix can take a long time for large datasets. 
+## So storing the calculated inverse and using it for unchanged matrixes later on
+## Would increase the performance significantly.
+## These functions calculate, set, store and retrieve values inorder to perform efficiently. 
 
-## Write a short comment describing this function
+## The function stores value in the cache and retrieves from the cache. 
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -23,7 +25,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+
+
+
+## The function checks if the value has already been calculated. 
+## If yes, retrieves from the cache, If not calculates and then stores in the cache. 
 
 cacheSolve <- function(x, ...) {
     m <- x$getInverse()
@@ -45,11 +51,4 @@ cacheSolve <- function(x, ...) {
     
     ## Return a matrix that is the inverse of 'x'
     m
-    
 }
-
-
-
-
-
-
